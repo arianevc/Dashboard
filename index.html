@@ -8,13 +8,18 @@
     <title>Dashboard</title>
 </head>
 <body>
+    <div class="hamburger" id="hamburgerBtn">
+        &#9776; <!-- This is the hamburger icon -->
+    </div>
     <section class="pane-1">
-        <div class="dashboard">
+       
+        <div class="dashboard" id="dashboard">
             <div class="content">
             <div class="head-container">
                 <img src="img/dashboard-icon.svg" alt="dashboard">
                 <p>Dashboard</p>
-                <img id="menubutton" src="img/menu_open.svg" alt="menu-toggle-button">
+               
+                <!-- <img id="menubutton" src="img/menu_open.svg" alt="menu-toggle-button"> -->
                 </div>
                 <div class="username">
                     <img src="img/user-icon.svg" alt="user-icon">
@@ -56,7 +61,7 @@
                            <img src="img/quiz.svg" alt="quiz">
                           <p>Compliance</p> 
                        </div>
-                    </div>
+                </div>
                     <div class="notification">
                         <div class="notification-options">
                             <img src="img/notification-icon.svg" alt="notification-icon">
@@ -175,16 +180,17 @@
     </div>
     </section>
     <section class="pane-3">
+        <div class="tasks-head-menu">
         <div class="tasks-head"><h1>Tasks</h1>
            <div><a href="#">View all</a></div>
             </div>
             <div class="tasks-menu">
-              <a href="#"><u>My tasks</u></a>
+              <a href="#">My tasks</a>
               <a href="#">Overdue</a>
               <a href="#">Assigned by me</a>
             </div>
-            <div class="tasks-table">
-                <table>
+                     <div class="tasks-table">
+                <table class="table-1">
                     <tr>
                         <th class="head">Task</th>
                         <th class="head">Category</th>
@@ -217,44 +223,61 @@
                     </tr>
                 </table>
             </div>
-            <div class="tasks-head"><h1>Payment History</h1>
-                <div><a href="#">View all</a></div>
-                 </div>
-            <div class="tasks-table">
-                <table>
-                    <tr>
-                        <th class="head">Transaction ID</th>
-                        <th class="head">Date of Transaction</th>
-                        <th class="head">Amount</th>
-                        <th class="head">Description</th>
-                    </tr>
-                    <tr>
-                        <th>#764657758</th>
-                        <td>23/11/23</td>
-                        <td>₹25000</td>
-                        <td>Mailbox</td>
-                    </tr>
-                    <tr>
-                        <th>#764657758</th>
-                        <td>23/11/23</td>
-                        <td>₹53200</td>
-                        <td id="reg">Registration (Upgrade)
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>#764657758</th>
-                        <td>23/11/23</td>
-                        <td>₹78000</td>
-                        <td>Mailbox</td>
-                    </tr>
-                    <tr>
-                        <th>#764657758</th>
-                        <td>23/11/23</td>
-                        <td>₹36000</td>
-                        <td>Mailbox</td>
-                    </tr>
-                </table>
             </div>
+   
+            <div class="payment-head">
+               
+                <div>
+                    <h1>Payment History</h1>
+                    <a href="#">View all</a>
+                </div>
+                <div class="tasks-table">
+                    <table class="table-2">
+                        <tr>
+                            <th class="head">Transaction ID</th>
+                            <th class="head">Date of Transaction</th>
+                            <th class="head">Amount</th>
+                            <th class="head">Description</th>
+                        </tr>
+                        <tr>
+                            <td><strong>#764657758</strong></th>
+                            <td>23/11/23</td>
+                            <td>₹25000</td>
+                            <td>Mailbox</td>
+                        </tr>
+                        <tr>
+                            <td><strong>#764657758</strong></th>
+                            <td>23/11/23</td>
+                            <td>₹53200</td>
+                            <td id="reg">Registration (Upgrade)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#764657758</strong></th>
+                            <td>23/11/23</td>
+                            <td>₹78000</td>
+                            <td>Mailbox</td>
+                        </tr>
+                        <tr>
+                            <td><strong>#764657758</strong></th>
+                            <td>23/11/23</td>
+                            <td>₹36000</td>
+                            <td>Mailbox</td>
+                        </tr>
+                    </table>
+                </div>
+                 </div>
+
     </section>
+    <script>
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+    const dashboard = document.getElementById('dashboard');
+     if (dashboard.style.display === 'none' || dashboard.style.display === '') {
+        dashboard.style.display = 'block';
+    } else {
+        dashboard.style.display = 'none';
+    }
+});
+ </script>
 </body>
 </html>
