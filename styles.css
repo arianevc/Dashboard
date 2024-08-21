@@ -395,9 +395,7 @@ body{
         border-radius: 5px;
          /* border-radius: 5px; */
     }
-    table th{
-        /* white-space: nowrap; */
-    }
+  
     .tasks-table table th,td{
         /* width: 140px; */
         text-align: center;
