@@ -6,10 +6,10 @@ body{
     .dashboard{
      width: 293px;
     height: 1147px;
-    left: -260px; /* Hide the dashboard by default */
+    /* left: -260px; Hide the dashboard by default */
     transition: left 1.3s ease-in-out;
     background-color: #0f1738;
-    
+    display: none;
     }
     .hamburger{
         width: 20px;
@@ -18,12 +18,11 @@ body{
         cursor: pointer;
         color: #fff;
         padding-top: 10px;
-        padding-left: 180px;
-        text-align: right;
+        /* padding-left: 180px; */
+        /* text-align: right; */
         position: absolute;
         /* z-index: 1000; */
     }
-    .hamburger toggled
     
     
     .content{
@@ -32,6 +31,8 @@ body{
     }
     .head-container{
         display: flex;
+        /* padding-top: -40px; */
+        padding-left: 20px;
     }
     .head-container p{
         color: #fff;
@@ -361,16 +362,18 @@ body{
         /* top:40px; */
         /* left: 22px; */
     }
-    .payment-head > div{
+    .payment-head-menu{
         display: flex;
         /* justify-content: center; */
         align-items: center;
+        padding-left: 25px;
     }
-    /* .payment-head a{
-        position: relative; */
+    .payment-head a{
+        position: relative; 
+        padding-left: 20px;
         /* top: 25px; */
-        /* left: 25px;
-    } */
+        /* /* left: 25px; */
+    }
     .tasks-table{
         position: relative;
         max-height: fit-content;
@@ -434,31 +437,42 @@ body{
          .pane-1{
             flex: 1;
             width: 100%;
-            display: none;
+            /* display: none; */
          }
          .hamburger{
             display:block;
-            color: #000;
+            color: #fff;
             padding-left: 20px;
+            z-index: 4;
+
 
          }
          .dashboard{
-            position: fixed;
-            height: 70px;
-            left: 120px;
+            position: absolute;
+            height: 870px;
+            /* left: 21px; */
+            align-items: center;
             width: 100%;
-            z-index: 1;
+            z-index: 3;
             /* display: none; */
          }
-         .content{
-            /* padding: auto; */
-            position: relative;
-            top: -20px;
+         .head-container p{
+            margin-left:20px;
+            text-align: center;
+         }
+         .head-container img{
             display: none;
          }
-         /* .username,.menu,.notification{
+         
+         .content{
+            padding: auto;
+            position: relative;
+            top: -20px;
+            /* display: none; */
+         }
+         .notification{
             display: none;
-         } */
+         }
          .gradient-box{
             position: relative;
             margin: auto;
